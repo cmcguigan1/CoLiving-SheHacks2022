@@ -3,14 +3,14 @@
     <style>
         h1{
             background: rgb(112,189,213);
-            padding: 30px 40px;
+            padding: 20px 30px;
             color: white;
             text-align:center;
         }
         h1{
 
             letter-spacing: 2px;
-            margin-bottom: 15px;
+            margin-bottom: 20px; 
         }
         h2{
             background: rgb(112,189,213);
@@ -70,7 +70,6 @@
             border-style: solid;
             border-width:0 2px 2px 0;
             top:10px;
-            left:16px;
             transform: rotate(45deg);
             height:15px;
             width: 7px;
@@ -98,6 +97,10 @@
         .row{
             clear:both;
         }
+        
+        .close:hover{
+            color:red;
+        }
 
         
     </style>
@@ -114,18 +117,20 @@
 <body>
 
     <div class="navbar">
-        <a href="chores.html">Chores</a>
-        <a href="billsplit.html">Split Bills</a>
-        <a href="welcome.html">Home</a>
-        <a href="groceryList.html">Grocery</a>
+
+        <a href="welcome.html">home</a>
+        <a href="chores.html">chores</a>
+        <a href="billsplit.html">split bills</a>
+
+        <a href="groceryList.html">groceries</a>
 
     </div>
     <div id="myDiv" class="header">
-    <h1>Group List
+    <h1>group list
         <p></p>
-    <input type="text" id="myInput1" placeholder="Grocery needed">
+    <input type="text" id="myInput1" placeholder="grocery needed">
     
-    <span onclick="addbtn()" class="addbtn">Add</span>
+    <span onclick="addbtn()" class="addbtn">add</span>
     </h1>
     </div>
     <ul id= "myUL1">
@@ -137,11 +142,11 @@
     <div id="formatting" class="column">
 
     <div id="myDiv" class="header">
-        <h2>Taras List
+        <h2>tara's list
             <p></p>
-        <input type="text" id="myInput2" placeholder="Grocery needed">
+        <input type="text" id="myInput2" placeholder="grocery needed">
         
-        <span onclick="addbtn2()" class="addbtn">Add</span>
+        <span onclick="addbtn2()" class="addbtn">add</span>
         </h2>
         </div>
         <ul id= "myUL2">
@@ -152,11 +157,11 @@
 
 <div class="column">
     <div id="myDiv" class="header">
-        <h2>Claire's List
+        <h2>claire's list
             <p></p>
-        <input type="text" id="myInput3" placeholder="Grocery needed">
+        <input type="text" id="myInput3" placeholder="grocery needed">
                 
-        <span onclick="addbtn3()" class="addbtn">Add</span>
+        <span onclick="addbtn3()" class="addbtn">add</span>
         </h2>
         </div>
         <ul id= "myUL3">
@@ -166,11 +171,11 @@
 </div>
 <div class="column">
     <div id="myDiv" class="header">
-        <h2>Kaitlyn's List
+        <h2>kaitlyn's list
              <p></p>
-        <input type="text" id="myInput4" placeholder="Grocery needed">
+        <input type="text" id="myInput4" placeholder="grocery needed">
                     
-        <span onclick="addbtn4()" class="addbtn">Add</span>
+        <span onclick="addbtn4()" class="addbtn">add</span>
         </h2>
         </div>
         <ul id= "myUL4">
@@ -180,11 +185,11 @@
 </div>
 <div class="column">
     <div id="myDiv" class="header">
-        <h2>Lauren's List
+        <h2>lauren's list
              <p></p>
-        <input type="text" id="myInput5" placeholder="Grocery needed">
+        <input type="text" id="myInput5" placeholder="grocery needed">
                         
-        <span onclick="addbtn5()" class="addbtn">Add</span>
+        <span onclick="addbtn5()" class="addbtn">add</span>
         </h2>
         </div>
         <ul id= "myUL5">

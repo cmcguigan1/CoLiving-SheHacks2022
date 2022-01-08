@@ -12,7 +12,7 @@ h1{
 }
 
 h4{
-  font-size: 25px;
+  font-size: 30px;
   color: white;
 }
 
@@ -21,9 +21,9 @@ h4{
     position: fixed; /* Set the navbar to fixed position */
     top: 0; /* Position the navbar at the top of the page */
     width: 100%;
-    height: 10%;
+    height: 7%;
     text-align: center;
-    padding-top: 5%;
+    padding-top: 3%;
     background-color: white;
     font-size: 20px;
 }
@@ -36,26 +36,21 @@ h4{
   text-align: center;
 }
 
-.page{
-  background-color: rgb(112,189,213);
-  width: 100%;
-  padding-bottom: 10%;
-}
-
-
-.budget-container{
-  padding-top: 15%;
-  padding-bottom: 6%;
+.namevalues-container{
+  padding-bottom: 8%;
   text-align:center;
 }
+.namevalues-container .row{
+  padding-left: 25%;
+  padding-top: 4%;
+}
 
-.budget-container h5{
+.namevalues-container h5{
   font-size: 20px;
 }
 
-.budget-container .column{
+.namevalues-container .column{
   width: 15%;
-  padding-left: 8%;
   float: left;
   font-size: 20px;
 }
@@ -65,16 +60,6 @@ h4{
   clear: both;
   }
 
-.budget-inputcontainer{
-  text-align:center;
-  align-items: center;
-}
-
-.expenseinput{
-  align-items: center;
-  text-align: center;
-}
-
 .month-amount{
   padding-left: 15px;
   padding-right: 15px;
@@ -82,10 +67,18 @@ h4{
 
 .history{
   padding-left: 10%;
+  font-size: 25px;
+  padding-bottom: 10%;
+  padding-top: 1%;
+  background-color: rgb(231, 159, 146);
 }
 
 .history td{
-  width:30%;
+  width: 31%;
+  padding-bottom: 30px;
+}
+.history #row1{
+  color: white;
 }
 
 label{
@@ -100,7 +93,15 @@ select{
   width: 10%;
   padding: 20px 20px;
   margin: 8px 20px;
-  box-sizing: border-box;
-
 }
 
+.budget-inputcontainer{
+  text-align:center;
+  padding-top: 5%;
+}
+
+.top{
+  background-color:rgb(112,189,213);
+  padding-bottom: 5%;
+  padding-top: 10%;
+}

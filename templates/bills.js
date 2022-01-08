@@ -26,6 +26,9 @@ document.getElementById("button").onclick = function(){
       document.getElementById("name4").innerText = "$" + amount;
       }
       publishhistory();
+
+      let inputs = document.querySelectorAll("input");
+      inputs.forEach((input) => (input.value = ""));
 };
 
 function publishhistory(){
@@ -40,9 +43,9 @@ function publishhistory(){
 
   var newRow = table.insertRow();   
 
-  newRow.insertCell().innerText = person;
-  newRow.insertCell().innerText = amount;
   newRow.insertCell().innerText = description;
+  newRow.insertCell().innerText = amount;
   newRow.insertCell().innerText = date;
+  newRow.insertCell().innerText = person;
 }
 
