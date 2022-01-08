@@ -21,10 +21,14 @@
 
     
     <div class='bills input'>
-    <h3>Input Total</h3>
-    <input type="text" id="myName" placeholder="Enter Name">
-    <button id="btn">Save</button>
-    <script src="bills.js"></script>
+    <form>
+        Splitting between: <input type ="number" id="people"/> <br><br>
+        Total price: <input type ="number" id="price"/> <br><br>
+        <input type="button" onClick="divide()" Value="Split"/> <br>
+    </form>
+        <p>Indvidual totals are: <br>
+        <span id='result'></span>
+        </p>
     </div>
 </body>
 </html>
