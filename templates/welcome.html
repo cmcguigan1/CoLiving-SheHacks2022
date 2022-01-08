@@ -30,6 +30,12 @@
                 margin-right: 20px;
                 margin-left: 20px;
             }
+            #greeting{
+                display: none;
+                
+                
+            }
+        
 </style>
     </head>
 
@@ -47,7 +53,7 @@
    in your co-living page, you can accomplish all your day-to-day tasks.
     <br/><br/>
 </p></center>
-<h2><center>sign in below to begin</center></h2>
+<h2 id= 'signInMessage'><center>sign in below to begin</center></h2>
 
 
 
@@ -56,16 +62,22 @@
 </div>
 
 <div class= "loginPopup" >
-    <form id="myForm" action= "/action_page.php" class="formContainer" method="post">
+    <iframe name="hiddenFrame" class="hide" style="width: 0; height:0;padding:0; background-color:white;"></iframe>
+    
+    <form id="myForm" action= "receiver.pl" target="hiddenFrame" class="formContainer" method="post">
         <p><b>sign in</b></p>
-        <label for="email"><b>email</b></label>
-        <input type="text" placeholder="enter email" name="email" required>
+        <label for="username"><b>username</b></label>
+        <input type="text" placeholder="enter username" name="username" required>
 
         <label for="psw"><b>password</b></label>
         <input type="password" placeholder="enter password" name="psw" required>
 
-        <button type="submit" class="btn">sign in</button>
+        <button type="submit" class="btn"  onclick= "closeForm(); openGreeting(); closeSignIn()">sign in</button>
         <button type="button" class="btn cancel" onclick="closeForm(); showButton()">close</button>
+    </form>
+    <form id="greeting" method="post" style="color:cadetblue; font-size: 60px;"><b><center>hello
+
+    </center></b>
     </form>
 
 </div>
@@ -82,6 +94,15 @@ function hideButton(x){
 function showButton(){
     document.getElementById('login').style.display='';
 }
+function openGreeting(){
+    document.getElementById('greeting').style.display='block';
+}
+function closeSignIn(){
+    document.getElementById('signInMessage').style.display= 'none';
+}
+
+
+
 
 </script>
 
