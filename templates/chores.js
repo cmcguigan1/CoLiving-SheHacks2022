@@ -10,10 +10,24 @@ for(let i=0;i<btns.length;i++){
 
 function editCell(event){
 	let clickedBtn = event.target;
-    let lbl = clickedBtn.nextElementSibling;
-    let inputBox = lbl.nextElementSibling;
-    let personlbl = inputBox.nextElementSibling;
-    let removeBtn = personlbl.nextElementSibling;
+    let parent = clickedBtn.parentElement;
+    let lbl = "";
+    let personlbl= "";
+    let inputBox= "";
+    let removeBtn= "";
+
+    if(parent.className === 'choreLi'){
+        lbl = clickedBtn.nextElementSibling;
+        inputBox = lbl.nextElementSibling;
+        personlbl = inputBox.nextElementSibling;
+        removeBtn = personlbl.nextElementSibling;
+    }
+
+    else{
+        lbl = clickedBtn.nextElementSibling;
+        inputBox = lbl.nextElementSibling;
+        removeBtn = inputBox.nextElementSibling;
+    }
     
     if(clickedBtn.innerText === 'edit'){
         lbl.hidden = true;
