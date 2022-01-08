@@ -2,7 +2,7 @@ var myNodelist = document.getElementsByTagName("LI");
 var i;
 for (i = 0; i < myNodelist.length; i++) {
   var span = document.createElement("SPAN");
-  var txt = document.createTextNode("\u00D7");
+  var txt = document.createTextNode("      remove");
   span.className = "close";
   span.appendChild(txt);
   myNodelist[i].appendChild(span);
@@ -31,14 +31,14 @@ function addbtn3() {
   var t = document.createTextNode(inputValue);
   li.appendChild(t);
   if (inputValue === '') {
-    alert("You must write something!");
+    alert("Please add a grocery item!");
   } else {
     document.getElementById("myUL3").appendChild(li);
   }
   document.getElementById("myInput3").value = "";
 
   var span = document.createElement("SPAN");
-  var txt = document.createTextNode("\u00D7");
+  var txt = document.createTextNode("      remove");
   span.className = "close";
   span.appendChild(txt);
   li.appendChild(span);
