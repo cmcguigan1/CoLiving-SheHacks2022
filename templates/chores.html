@@ -34,7 +34,17 @@
             #firstChore{
                 padding-top: 20px;
             }
-           
+            button{
+                margin-right: 0;
+                background:rgb(124, 196, 196);
+                color:black;
+                font-size: 12px;
+                cursor: pointer;
+                transition: 0.2s;
+                font-family: Georgia, 'Times New Roman', Times, serif;
+                font-weight: bold;
+            }
+
         </style>
     </head>
 
@@ -56,16 +66,19 @@
                 <button id='edit-btn'>edit</button>
                 <label id='edit-lbl'>Dishes: </label>
                 <input id='edit-txt' type='text' hidden />
+                <button id='remove-btn' hidden>remove</button>
             </li>
             <li id="secondChore"> 
                 <button id='edit-btn'>edit</button>
                 <label id='edit-lbl'>Take out Trash: </label>
                 <input id='edit-txt' type='text' hidden />
+                <button id='remove-btn' hidden>remove</button>
             </li>
             <li id="thirdChore">
                 <button id='edit-btn'>edit</button>
                 <label id='edit-lbl'>Sweeping: </label>
                 <input id='edit-txt' type='text' hidden />
+                <button id='remove-btn' hidden>remove</button>
             </li>
         </ul>
     </div> 
