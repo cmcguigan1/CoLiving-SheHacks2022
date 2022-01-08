@@ -3,10 +3,9 @@
     <head>
         <title>CoLiving</title>
         <link rel="stylesheet" href="style.css">
-        
         <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300&family=Quicksand&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300&family=Quicksand&family=Work+Sans:wght@200&display=swap" rel="stylesheet">
 
     </head>
 
@@ -25,13 +24,13 @@
         <h4>Roomate Expenses</h4>
         <div class="row">
             <div class="column"><h5>Tara</h5>
-                <span id="budget1" class="month-amount">&#36; 0.00</span> </div>
+                <span id="name1" class="month-amount">&#36; 0.00</span> </div>
            <div class="column"> <h5>Claire</h5>
-                <span id="budget2" class="month-amount">&#36; 0.00</span> </div>
+                <span id="name2" class="month-amount">&#36; 0.00</span> </div>
              <div class="column"><h5>Kaitlyn</h5>
-                <span id="budget3" class="month-amount">&#36; 0.00</span></div>
+                <span id="name3" class="month-amount">&#36; 0.00</span></div>
             <div class="column"><h5>Lauren</h5>
-                    <span id="budget3" class="month-amount">&#36; 0.00</span></div>
+                <span id="name4" class="month-amount">&#36; 0.00</span></div>
     </div>
     </div>
 
@@ -55,18 +54,16 @@
     </div> <!-- right container -->
 
     <div class="expenseinput">
-        <input id="text" placeholder="Description">    
-        <input id="number" placeholder="Value">
-        <input id="date" placeholder="Date">
+        <input id="text" type="text" placeholder="Description">    
+        <input id="number" type="number" placeholder="Value">
+        <input id ="date" type="date" placeholder="Date">
         <button class="btn">Add transaction</button>
     </div>
-
-    <h3>History</h3>
+    <div class='history'>
+    <h4 >History</h4>
       <ul id="list" class="list">
-        <!-- <li class="minus">
-          Cash <span>-$400</span><button class="delete-btn">x</button>
-        </li> -->
       </ul>
+    </div>
 
 </section> <!-- page-->
 

@@ -1,8 +1,19 @@
+body{
+font-family: 'Poppins', sans-serif;
+font-family: 'Quicksand', sans-serif;
+font-family: 'Work Sans', sans-serif;
+}
+
 h1{
     text-align: center;
     font-size: 30px;
     align-content: center;
     padding-top: 20%;
+}
+
+h4{
+  font-size: 25px;
+  color: white;
 }
 
 .navbar{
@@ -14,6 +25,7 @@ h1{
     text-align: center;
     padding-top: 5%;
     background-color: white;
+    font-size: 20px;
 }
 
 .navbar a{
@@ -25,10 +37,11 @@ h1{
 }
 
 .page{
-  background-color: #fffae9;
+  background-color: rgb(112,189,213);
   width: 100%;
   padding-bottom: 10%;
 }
+
 
 .budget-container{
   padding-top: 15%;
@@ -37,8 +50,10 @@ h1{
 }
 
 .budget-container .column{
-  width: 25%;
+  width: 15%;
+  padding-left: 8%;
   float: left;
+  font-size: 20px;
 }
 .row:after {
   content: "";
@@ -62,3 +77,6 @@ h1{
   padding-right: 15px;
 }
 
+.history{
+  padding-left: 10%;
+}
