@@ -19,7 +19,7 @@
                 color: black;
             }
             h1 {
-                padding-bottom: 20px; 
+                padding-bottom: 60px; 
                 background: rgb(112,189,213);
                 color: white;}
             #myForm{
@@ -67,16 +67,15 @@
     <form id="myForm" action= "receiver.pl" target="hiddenFrame" class="formContainer" method="post">
         <p><b>sign in</b></p>
         <label for="username"><b>username</b></label>
-        <input type="text" placeholder="enter username" name="username" required>
+        <input id="usr" type="text" placeholder="enter username" name="username" required="required"/>
 
         <label for="psw"><b>password</b></label>
-        <input type="password" placeholder="enter password" name="psw" required>
+        <input id="pass" type="password" placeholder="enter password" name="psw" required="required"/>
 
-        <button type="submit" class="btn"  onclick= "closeForm(); openGreeting(); closeSignIn()">sign in</button>
-        <button type="button" class="btn cancel" onclick="closeForm(); showButton()">close</button>
+        <button id= 'btnSubmit'  type="submit" class="btn"  onclick= "closeForm(); openGreeting(); closeSignIn()">submit</button>
+        <button type="button" class="btn cancel"  onclick="closeForm(); showButton()">close</button>
     </form>
     <form id="greeting" method="post" style="color:cadetblue; font-size: 60px;"><b><center>hello
-
     </center></b>
     </form>
 
