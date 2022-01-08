@@ -1,8 +1,8 @@
-//Edit type of chores
 
+//Edit type of chores
 let cells = document.getElementsByTagName('li');
 
-let btns = document.querySelectorAll('button');
+let btns = document.querySelectorAll('#edit-btn');
 
 for(let i=0;i<btns.length;i++){
     btns[i].addEventListener("click", (event) => {editCell(event)});
@@ -24,4 +24,18 @@ function editCell(event){
         lbl.innerText = inputBox.value;
         clickedBtn.innerText = 'edit'; 
     }
+}
+
+//Adding new chores
+let add = document.getElementById('newChore');
+add.addEventListener("click", (event) => {addNew(event)});
+
+function addNew(event){
+    let addbtn = event.target;
+    let li = document.createElement('li');
+    li.innerHTML = `<button id='edit-btn'>edit</button>
+    <label id='edit-lbl'>New: </label>
+    <input id='edit-txt' type='text' hidden />`
+    li.firstElementChild.addEventListener("click", (event) => {editCell(event)});
+    document.querySelector('.list').appendChild(li);
 }
