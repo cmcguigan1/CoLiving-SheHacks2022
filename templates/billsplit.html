@@ -19,16 +19,34 @@
         <a href="groceryList.html">Groceries</a>
     </div>
 
-    
-    <div class='bills input'>
-    <form>
-        Splitting between: <input type ="number" id="people"/> <br><br>
-        Total price: <input type ="number" id="price"/> <br><br>
-        <input type="button" onClick="divide()" Value="Split"/> <br>
-    </form>
-        <p>Indvidual totals are: <br>
-        <span id='result'></span>
-        </p>
+    <div class="budget-container">
+    <div class='whole budget-container'>
+        <h4>Your Expenses</h4>
+        <span id="month-budget" class="month-amount">&#36; 0</span>
+        </div> <!-- whole budget container-->
+
+    <div class="budget-inputcontainer">
+        <div class="calccontainer">
+            <h4>Track Your Budget</h4>
+            <div class="dropdown open">
+                <form>
+                    <label> Who Paid? </label>  
+                        <select>  
+                        <option class="dropdown-item" value= "Roomate1"> Rooomate1</option>  
+                        <option class="dropdown-item" value= "Roomate2"> Roomate2 </option>  
+                        <option class="dropdown-item" value= "Roomate3"> Roomate3</option> 
+                        </select>  
+                        </form>  
+                </form>
+                <br>
+            </div>
+        </div> <!--calc container-->
+    </div> <!-- right container -->
+
+    <div class="expenseinput">
+        <input type="text" placeholder="Description">    
+        <input type="number" placeholder="Value">
+        <input type="date" placeholder="Date">
     </div>
 </body>
 </html>
