@@ -40,7 +40,8 @@ function editCell(event){
         lbl.hidden = false;
         lbl.innerText = inputBox.value;
         clickedBtn.innerText = 'edit';
-        removeBtn.hidden = true; 
+        removeBtn.hidden = true;
+        assign(); 
     }
 }
 
@@ -66,15 +67,17 @@ function addNew(event){
         document.querySelector('.list').appendChild(li);
     }
     else{
+        li.className = 'personLi';
         li.innerHTML = `<label id='fixed-lbl'>Person: </label>
         <button id='edit-btn'>edit</button>
-        <label id='edit-lbl'>New: </label>
+        <label id='edit-lbl' class='name'>New </label>
         <input id='edit-txt' type='text' hidden />
         <button id='remove-btn' hidden>remove</button>`
         li.firstElementChild.nextElementSibling.addEventListener("click", (event) => {editCell(event)});
         li.lastElementChild.addEventListener("click", (event) => {removeCell(event)});
         document.querySelector('.people').appendChild(li);
     }
+    assign();
 }
 
 //Removing a chore or a person
@@ -92,5 +95,18 @@ function removeCell(event){
         document.querySelector('.people').removeChild(li);
     }
 }
+
+//Assigning people to chores
+function assign(){
+    let names = document.querySelectorAll('.personLi');
+    let chores = document.querySelectorAll('.choreLi')
+    let assignmentlbls = document.querySelectorAll('#assignment-lbl');
+    let inputNames = document.querySelectorAll('.name')
+    for(let i=0;i<names.length;i++){
+        assignmentlbls[i].innerText = inputNames[i].innerText;
+    }
+}   
+
+assign();
 
 
