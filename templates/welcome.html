@@ -52,7 +52,7 @@
 
 
 <div class="openBtn">
-  <center><button class="openButton" onclick="openForm(); hideButton(this)" style="background-color:rgb(124, 196, 196); border-color:dimgray; color:black; ">sign in</button></center>
+  <center><button id='login' class="openButton" onclick="openForm(); hideButton(this)" style="background-color:rgb(124, 196, 196); border-color:dimgray; color:black; ">sign in</button></center>
 </div>
 
 <div class= "loginPopup" >
@@ -65,7 +65,7 @@
         <input type="password" placeholder="enter password" name="psw" required>
 
         <button type="submit" class="btn">sign in</button>
-        <button type="button" class="btn cancel" onclick="closeForm(); showButton(this)">close</button>
+        <button type="button" class="btn cancel" onclick="closeForm(); showButton()">close</button>
     </form>
 
 </div>
@@ -79,8 +79,8 @@
 function hideButton(x){
     x.style.display='none';
 }
-function showButton(y){
-    y.style.display='block';
+function showButton(){
+    document.getElementById('login').style.display='';
 }
 
 </script>
