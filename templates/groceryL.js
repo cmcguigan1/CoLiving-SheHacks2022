@@ -16,7 +16,6 @@ function displayList(list){
         if(list==0){
             return
         }
-        console.log(list[i]);
-        console.log( );
+        alert(list[i]);
     }
 }
