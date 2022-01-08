@@ -19,23 +19,25 @@
         <a href="groceryList.html">Groceries</a>
     </div>
 
+<section class="page">
+
     <div class="budget-container">
-        <h4>Roomate Dues</h4>
+        <h4>Roomate Expenses</h4>
         <div class="row">
             <div class="column"><h5>Tara</h5>
-                <span id="budget1" class="month-amount">&#36; 0</span> </div>
+                <span id="budget1" class="month-amount">&#36; 0.00</span> </div>
            <div class="column"> <h5>Claire</h5>
-                <span id="budget2" class="month-amount">&#36; 0</span> </div>
+                <span id="budget2" class="month-amount">&#36; 0.00</span> </div>
              <div class="column"><h5>Kaitlyn</h5>
-                <span id="budget3" class="month-amount">&#36; 0</span></div>
+                <span id="budget3" class="month-amount">&#36; 0.00</span></div>
             <div class="column"><h5>Lauren</h5>
-                    <span id="budget3" class="month-amount">&#36; 0</span></div>
+                    <span id="budget3" class="month-amount">&#36; 0.00</span></div>
     </div>
     </div>
 
     <div class="budget-inputcontainer">
         <div class="calccontainer">
-            <h4>Track Your Budget</h4>
+            <h4>Track Your Expenses</h4>
             <div class="dropdown open">
                 <form>
                     <label> Who Paid?</label>  <br><br>
@@ -53,9 +55,20 @@
     </div> <!-- right container -->
 
     <div class="expenseinput">
-        <input type="text" placeholder="Description">    
-        <input type="number" placeholder="Value">
-        <input type="date" placeholder="Date">
+        <input id="text" placeholder="Description">    
+        <input id="number" placeholder="Value">
+        <input id="date" placeholder="Date">
+        <button class="btn">Add transaction</button>
     </div>
+
+    <h3>History</h3>
+      <ul id="list" class="list">
+        <!-- <li class="minus">
+          Cash <span>-$400</span><button class="delete-btn">x</button>
+        </li> -->
+      </ul>
+
+</section> <!-- page-->
+
 </body>
 </html>
