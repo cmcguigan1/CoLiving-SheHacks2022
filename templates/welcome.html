@@ -11,7 +11,7 @@
     </head>
 
 <body>
-<h1>Welcome to your personal co-living page!</h1>
+<h1>welcome to your personal co-living page!</h1>
 
     <div class="navbar">
         <a href="chores.html">Chores</a>
@@ -25,28 +25,35 @@
     <br/><br/>
 </p></center>
 <h2><center>sign in below to begin</center></h2>
-<center><button style= "background-color:cadetblue; border-color:black; color:white">sign in</button></center>
 
-<div class= "form-popup" id="myForm">
-    <form action= "/action_page.php" class="form-container">
-        <h1>Sign in</h1>
+
+<div class="openBtn">
+  <center><button class="openButton" onclick="openForm()" style="background-color:cadetblue; border-color:black; color:white">sign in</button></center>
+</div>
+<div class="loginPopup">
+<div class= "formPopup" id="myForm">
+    <form action= "/action_page.php" class="formContainer">
+        <p><b>sign in</b></p>
         <label for="email"><b>email</b></label>
         <input type="text" placeholder="enter email" name="email" required>
 
         <label for="psw"><b>password</b></label>
         <input type="password" placeholder="enter password" name="psw" required>
 
-        <button type="submit" class="btn">Sign in</button>
-        <button type="button" class="btn cancel" onclick="closeForm()">Close</button>
+        <button type="submit" class="btn">sign in</button>
+        <button type="button" class="btn cancel" onclick="closeForm()">close</button>
     </form>
 </div>
-</body>
+</div>
 <script>function openForm() {
     document.getElementById("myForm").style.display = "block";
   }
   
   function closeForm() {
     document.getElementById("myForm").style.display = "none";
-  }</script>
+  }
+
+</script>
+</body>
 
 </html>
