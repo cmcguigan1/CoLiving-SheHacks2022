@@ -9,25 +9,49 @@
         <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300&family=Quicksand&display=swap" rel="stylesheet">
 
         <style>
+            header{
+            background: rgb(112,189,213);
+            padding: 30px 40px;
+            color: white;
+            text-align:center;
+            }
+            body{
+                font-family: 'Fauna One', serif;
+                font-size: 20px;  
+                color: white;
+            }
             h1 {
-                font-family: Georgia, serif; 
+                font-family: Georgia, serif;
+                padding-bottom: 20px; 
+                background: rgb(112,189,213);
+                color: white;
             }
             ul {
                 list-style-type: none;
-                font-size: 20px;
             }
             .choreList{
-                border: 1px solid black;
-                border-radius: 5px;
+                border: 1px solid rgb(231, 159, 146);
+                border-radius: 12px;
                 background-color: rgb(231, 159, 146);
+                margin-right: 20px;
+                margin-left: 20px;
             }
             li{
-                padding-bottom: 10px;
+                padding-bottom: 20px;
             }
             #firstChore{
-                padding-top: 10px;
+                padding-top: 20px;
             }
-           
+            button{
+                margin-right: 0;
+                background:rgb(124, 196, 196);
+                color:black;
+                font-size: 12px;
+                cursor: pointer;
+                transition: 0.2s;
+                font-family: Georgia, 'Times New Roman', Times, serif;
+            }
+
         </style>
     </head>
 
@@ -44,11 +68,31 @@
 
     <div class="choreList"> 
         <ul class="list">
-            <li id="firstChore">Taking out Trash: </li>
-            <li id="secondChore">Dishes: </li>
-            <li id="thirdChore">Sweeping Floor: </li>
+
+            <li id="firstChore">
+                <button id='edit-btn'>edit</button>
+                <label id='edit-lbl'>Dishes: </label>
+                <input id='edit-txt' type='text' hidden />
+                <button id='remove-btn' hidden>remove</button>
+            </li>
+            <li id="secondChore"> 
+                <button id='edit-btn'>edit</button>
+                <label id='edit-lbl'>Take out Trash: </label>
+                <input id='edit-txt' type='text' hidden />
+                <button id='remove-btn' hidden>remove</button>
+            </li>
+            <li id="thirdChore">
+                <button id='edit-btn'>edit</button>
+                <label id='edit-lbl'>Sweeping: </label>
+                <input id='edit-txt' type='text' hidden />
+                <button id='remove-btn' hidden>remove</button>
+            </li>
         </ul>
     </div> 
+
+    <div>
+        <button id='newChore'>Add Chore</button>
+    </div>
   
   <script src="chores.js"></script>
   

@@ -1,6 +1,4 @@
-const btn= document.getElementById("btn");
-
-btn.addEventListener('click', function(){
-  var name = document.getElementById("myName").value;
-  alert("Name: "+ name);
-});
+const list = document.getElementById('list');
+const number = document.getElementById('number');
+const date = document.getElementById('date');
+const text = document.getElementById('text');
