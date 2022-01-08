@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html>
     <style>
-        header{
+        h1{
             background: rgb(112,189,213);
             padding: 30px 40px;
             color: white;
@@ -12,20 +12,37 @@
             letter-spacing: 2px;
             margin-bottom: 15px;
         }
+        h2{
+            background: rgb(112,189,213);
+            padding: 10px 40px;
+            color: white;
+            text-align:center;
+        }
+        h2{
+            font-family: Georgia, 'Times New Roman', Times, serif;
+            letter-spacing: 2px;
+            margin-bottom: 15px;
+        }
         input{
             width: 75%;
-            margin-right: 0;
+            padding:30px 40px;
             padding: 10px;
             font-size: 15px;
             font-family: Georgia, 'Times New Roman', Times, serif;
         }
+        ul{
+            margin:0;
+            padding:1px;
+        }
         ul li{
             cursor: pointer;
-            position: relative;
-            padding: 12px 8px 12px 40px;
+            position:relative;
+            width:98.6%;
+            text-align:center;
+            padding: 10px;
             list-style-type: none;
-            background-color: #eee;
-            font-size: 14px;
+            background-color: rgb(230, 122, 122);
+            font-size: 17px;
             transition: 0.2s;
             font-family: Georgia, 'Times New Roman', Times, serif;
 
@@ -35,7 +52,8 @@
             user-select: none;
         }
         ul li:nth-child(odd){
-            background-color: #b2bec3;;
+            background-color: #b2bec3;
+            
         }
         ul li:hover{
             background: #ddd;
@@ -57,16 +75,19 @@
             height:15px;
             width: 7px;
         }
-        .far{
-            position:absolute;
-            right:0;
-            top:0;
-            padding:12px 16px 12px 16px;
+        .addbtn {
+            padding: 10px;
+            width: 50%;
+            background: #d9d9d9;
+            color: #555;
+            float: inline-end;
+            text-align: center;
+            font-size: 16px;
+            cursor: pointer;
+            transition: 0.3s;
+            border-radius: 0;
         }
-        .far:hover{
-            background-color: blueviolet;
-            color:white;
-        }
+
 
         
     </style>
@@ -89,12 +110,30 @@
         <a href="groceryList.html">Grocery</a>
 
     </div>
-    <header>
-    <h1>Group List</h1>
-    <input type="text" id="myInput" placeholder="Grocery needed"/>
-    <button id="adder" onclick="addBtn()">Add</button>
-    </header>
-    <ul id= "myUL"></ul>
+    <div id="myDiv" class="header">
+    <h1>Group List
+        <p></p>
+    <input type="text" id="myInput" placeholder="Grocery needed">
+    
+    <span onclick="addbtn()" class="addbtn">Add</span>
+    </h1>
+    </div>
+    <ul id= "myUL">
+
+    </ul>
     <script src="groceryL.js"></script>
+    <div id="myDiv" class="header">
+        <h2>Taras List
+            <p></p>
+        <input type="text" id="myInput" placeholder="Grocery needed">
+        
+        <span onclick="addbtn()" class="addbtn">Add</span>
+        </h2>
+        </div>
+        <ul id= "myUL">
+    
+        </ul>
+        <script src="groceryL.js"></script>
+    
 </body>
 </html>
