@@ -14,7 +14,7 @@
         }
         h2{
             background: rgb(112,189,213);
-            padding: 30px 40px;
+            padding:20px 30px;
             color: white;
             text-align:center;
         }
@@ -30,19 +30,21 @@
             font-size: 15px;
         }
          ul{
-            margin:0;
+            
             padding:1px;
         }
         ul li{
             cursor: pointer;
-            position:relative;
+            position:below;
             width:98.6%;
             text-align:center;
             padding: 10px;
             list-style-type: none;
-            background-color: rgb(230, 122, 122);
+            background-color: rgb(218, 211, 211);
             font-size: 17px;
             transition: 0.2s;
+
+            -webkit-column-break-inside: avoid;
 
             -webkit-user-select: none;
             -moz-user-select:none;
@@ -88,6 +90,14 @@
             background-color: #bbb;
             color: #FFF;
         }
+        .column{
+            width: 25%;
+            float:left;
+            column-gap: 5px;
+        }
+        .row{
+            clear:both;
+        }
 
         
     </style>
@@ -122,6 +132,10 @@
 
     </ul>
     <script src="groceryL.js"></script>
+
+    <div class="row">
+    <div id="formatting" class="column">
+
     <div id="myDiv" class="header">
         <h2>Taras List
             <p></p>
@@ -134,8 +148,9 @@
     
         </ul>
         <script src="grocery2.js"></script>
+    </div>
 
-
+<div class="column">
     <div id="myDiv" class="header">
         <h2>Claire's List
             <p></p>
@@ -148,7 +163,8 @@
             
         </ul>
         <script src="groceryClaire.js"></script>
-
+</div>
+<div class="column">
     <div id="myDiv" class="header">
         <h2>Kaitlyn's List
              <p></p>
@@ -161,6 +177,8 @@
                 
          </ul>
         <script src="groceryKaitlyn.js"></script>
+</div>
+<div class="column">
     <div id="myDiv" class="header">
         <h2>Lauren's List
              <p></p>
@@ -173,5 +191,9 @@
                     
         </ul>
          <script src="groceryLauren.js"></script>
+</div>
+
+        </div>
+    </div>
 </body>
 </html>
