@@ -28,3 +28,18 @@ h1{
   align-content: center;
   text-align: center;
 }
+
+.budget-container{
+  text-align:center;
+  padding-top: 10%;
+}
+.budget-inputcontainer{
+  text-align:center;
+  align-items: center;
+}
+
+.expenseinput{
+  padding-top: 3%;
+  align-items: center;
+  text-align: center;
+}
