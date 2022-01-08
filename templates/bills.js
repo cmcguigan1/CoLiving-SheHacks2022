@@ -40,9 +40,9 @@ function publishhistory(){
 
   var newRow = table.insertRow();   
 
-  newRow.insertCell().innerText = person;
-  newRow.insertCell().innerText = amount;
   newRow.insertCell().innerText = description;
+  newRow.insertCell().innerText = amount;
   newRow.insertCell().innerText = date;
+  newRow.insertCell().innerText = person;
 }
 
