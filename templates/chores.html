@@ -29,17 +29,24 @@
             ul {
                 list-style-type: none;
             }
-            .choreList{
+            .choreList, .peopleList {
+                display: inline-block;
                 border: 1px solid rgb(231, 159, 146);
                 border-radius: 12px;
                 background-color: rgb(231, 159, 146);
+                width: 40%;
+            }
+            .peopleList{
+                float: right;
                 margin-right: 20px;
+            }
+            .choreList{
                 margin-left: 20px;
             }
             li{
                 padding-bottom: 20px;
             }
-            #firstChore{
+            #firstChore, #firstPerson{
                 padding-top: 20px;
             }
             button{
@@ -50,6 +57,16 @@
                 cursor: pointer;
                 transition: 0.2s;
                 font-family: Georgia, 'Times New Roman', Times, serif;
+            }
+            #newChore{
+                float: left;
+                margin-left: 170px;
+                margin-top: 10px;
+            }
+            #newPerson{
+                float: right;
+                margin-right: 170px;
+                margin-top: 10px;
             }
 
         </style>
@@ -69,29 +86,82 @@
     <div class="choreList"> 
         <ul class="list">
 
-            <li id="firstChore">
+            <li id="firstChore" class='choreLi'>
                 <button id='edit-btn'>edit</button>
                 <label id='edit-lbl'>Dishes: </label>
                 <input id='edit-txt' type='text' hidden />
+                <label id='assignment-lbl'>Claire</label>
                 <button id='remove-btn' hidden>remove</button>
             </li>
-            <li id="secondChore"> 
+
+            <li id="secondChore" class='choreLi'> 
                 <button id='edit-btn'>edit</button>
                 <label id='edit-lbl'>Take out Trash: </label>
                 <input id='edit-txt' type='text' hidden />
+                <label id='assignment-lbl'>Tara</label>
                 <button id='remove-btn' hidden>remove</button>
             </li>
-            <li id="thirdChore">
+
+            <li id="thirdChore" class='choreLi'>
                 <button id='edit-btn'>edit</button>
                 <label id='edit-lbl'>Sweeping: </label>
                 <input id='edit-txt' type='text' hidden />
+                <label id='assignment-lbl'>Lauren</label>
+                <button id='remove-btn' hidden>remove</button>
+            </li>
+
+            <li id="fourthChore" class='choreLi'>
+                <button id='edit-btn'>edit</button>
+                <label id='edit-lbl'>Laundry: </label>
+                <input id='edit-txt' type='text' hidden />
+                <label id='assignment-lbl'>Kaitlyn</label>
                 <button id='remove-btn' hidden>remove</button>
             </li>
         </ul>
     </div> 
+        
+    <div class="peopleList">
+        <ul class='people'>
+            <li id='person1'>
+                <label id='fixed-lbl'>Person: </label>
+                <button id='edit-btn'>edit</button>
+                <label id='edit-lbl'>Claire </label>
+                <input id='edit-txt' type='text' hidden />
+                <button id='remove-btn' hidden>remove</button>
+            </li>
+
+            <li id='person2'>
+                <label id='fixed-lbl'>Person: </label>
+                <button id='edit-btn'>edit</button>
+                <label id='edit-lbl'>Kaitlyn </label>
+                <input id='edit-txt' type='text' hidden />
+                <button id='remove-btn' hidden>remove</button>
+            </li>
+
+            <li id='person3'>
+                <label id='fixed-lbl'>Person: </label>
+                <button id='edit-btn'>edit</button>
+                <label id='edit-lbl'>Lauren </label>
+                <input id='edit-txt' type='text' hidden />
+                <button id='remove-btn' hidden>remove</button>
+            </li>
+
+            <li id='person4'>
+                <label id='fixed-lbl'>Person: </label>
+                <button id='edit-btn'>edit</button>
+                <label id='edit-lbl'>Lauren </label>
+                <input id='edit-txt' type='text' hidden />
+                <button id='remove-btn' hidden>remove</button>
+            </li>
+        </ul>
+    </div>>    
 
     <div>
         <button id='newChore'>Add Chore</button>
+    </div>
+
+    <div>
+        <button id='newPerson'>Add Participant</button>
     </div>
   
   <script src="chores.js"></script>

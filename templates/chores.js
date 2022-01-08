@@ -12,7 +12,8 @@ function editCell(event){
 	let clickedBtn = event.target;
     let lbl = clickedBtn.nextElementSibling;
     let inputBox = lbl.nextElementSibling;
-    let removeBtn = inputBox.nextElementSibling;
+    let personlbl = inputBox.nextElementSibling;
+    let removeBtn = personlbl.nextElementSibling;
     
     if(clickedBtn.innerText === 'edit'){
         lbl.hidden = true;
@@ -29,23 +30,40 @@ function editCell(event){
     }
 }
 
-//Adding new chores
-let add = document.getElementById('newChore');
-add.addEventListener("click", (event) => {addNew(event)});
+//Adding new chores or people
+let addChore = document.getElementById('newChore');
+addChore.addEventListener("click", (event) => {addNew(event)});
+
+let addPerson = document.getElementById('newPerson');
+addPerson.addEventListener("click", (event) => {addNew(event)});
 
 function addNew(event){
     let addbtn = event.target;
     let li = document.createElement('li');
-    li.innerHTML = `<button id='edit-btn'>edit</button>
-    <label id='edit-lbl'>New: </label>
-    <input id='edit-txt' type='text' hidden />
-    <button id='remove-btn' hidden>remove</button>`
-    li.firstElementChild.addEventListener("click", (event) => {editCell(event)});
-    li.lastElementChild.addEventListener("click", (event) => {removeCell(event)});
-    document.querySelector('.list').appendChild(li);
+    if(addbtn.id === 'newChore'){
+        li.className = 'choreLi';
+        li.innerHTML = `<button id='edit-btn'>edit</button>
+        <label id='edit-lbl'>New: </label>
+        <input id='edit-txt' type='text' hidden />
+        <label id='assignment-lbl'>Person</label>
+        <button id='remove-btn' hidden>remove</button>`
+        li.firstElementChild.addEventListener("click", (event) => {editCell(event)});
+        li.lastElementChild.addEventListener("click", (event) => {removeCell(event)});
+        document.querySelector('.list').appendChild(li);
+    }
+    else{
+        li.innerHTML = `<label id='fixed-lbl'>Person: </label>
+        <button id='edit-btn'>edit</button>
+        <label id='edit-lbl'>New: </label>
+        <input id='edit-txt' type='text' hidden />
+        <button id='remove-btn' hidden>remove</button>`
+        li.firstElementChild.nextElementSibling.addEventListener("click", (event) => {editCell(event)});
+        li.lastElementChild.addEventListener("click", (event) => {removeCell(event)});
+        document.querySelector('.people').appendChild(li);
+    }
 }
 
-//Removing a chore
+//Removing a chore or a person
 let removeBtns = document.querySelectorAll('#remove-btn');
 for(let i=0;i<removeBtns.length;i++){
     removeBtns[i].addEventListener("click", (event) => {removeCell(event)});
@@ -53,5 +71,12 @@ for(let i=0;i<removeBtns.length;i++){
 function removeCell(event){
     let tar = event.target;
     let li = tar.parentNode;
-    document.querySelector('.list').removeChild(li);
+    if(li.className === 'choreLi'){
+        document.querySelector('.list').removeChild(li);
+    }
+    else{
+        document.querySelector('.people').removeChild(li);
+    }
 }
+
+
