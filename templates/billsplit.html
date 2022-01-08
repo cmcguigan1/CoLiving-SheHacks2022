@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html>
     <head>
-        <title>CoLiving</title>
+        <title>Co-Living</title>
         <link rel="stylesheet" href="style.css">
         <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -12,62 +12,61 @@
 <body>
 
     <div class="navbar">
-        <a href="chores.html">Chores</a>
-        <a href="billsplit.html">Budget Tracker</a>
-        <a href="welcome.html">Home</a>
-        <a href="groceryList.html">Groceries</a>
+        <a href="welcome.html">home</a>
+        <a href="chores.html">chores</a>
+        <a href="billsplit.html">split bills</a>
+        <a href="groceryList.html">groceries</a>
     </div>
 
-<section class="page">
 
-    <div class="budget-container">
-        <h4>Roomate Expenses</h4>
-        <div class="row">
-            <div class="column"><h5>Tara</h5>
-                <span id="name1" class="month-amount">&#36; 0.00</span> </div>
-           <div class="column"> <h5>Claire</h5>
-                <span id="name2" class="month-amount">&#36; 0.00</span> </div>
-             <div class="column"><h5>Kaitlyn</h5>
-                <span id="name3" class="month-amount">&#36; 0.00</span></div>
-            <div class="column"><h5>Lauren</h5>
-                <span id="name4" class="month-amount">&#36; 0.00</span></div>
-    </div>
-    </div>
-
-    <div class="budget-inputcontainer">
-        <div class="calccontainer">
-            <h4>Track Your Expenses</h4>
-            <div class="dropdown open">
-                <form>
-                    <label> Who Paid?</label>  <br><br>
-                        <select id="dropdownlist">  
+    <div class="namevalues-container">
+        <div class="top"> <h4>roomate expenses</h4> </div> 
+        <div class="budget-inputcontainer">
+            <div class="inputchoices">
+                <form name="form">
+                    <label> input an expense:</label>  <br><br>
+                    <div class="expenseinput">
+                    <select id="dropdownlist"> 
                         <option class="dropdown-item" value= "Roomate1"> Tara </option>  
                         <option class="dropdown-item" value= "Roomate2"> Claire </option>  
                         <option class="dropdown-item" value= "Roomate3"> Kaitlyn</option> 
                         <option class="dropdown-item" value= "Roomate3"> Lauren</option> 
-                        </select>  
-                        </form>  
-                </form>
+                    </select>  
+                </form> 
+                    <input id="text" type="text" placeholder="Description">    
+                    <input id="number" type="number" placeholder="Value">
+                    <input id ="date" type="date" placeholder="Date">
+                    <button class="btn" type ="button" id="button"> add expense</button>
+                </div>
                 <br>
-            </div>
-        </div> <!--calc container-->
-    </div> <!-- right container -->
+            </div> <!-- input choices-->
+    </div> <!-- budget-inputcontainer -->
 
-    <div class="expenseinput">
-        <input id="text" type="text" placeholder="Description">    
-        <input id="number" type="number" placeholder="Value">
-        <input id ="date" type="date" placeholder="Date">
-        <button class="btn" type ="button" id="button"> Add transaction</button>
+    <!-- start of the names and numbers section-->
+    <div class="row">
+        <div class="column"><h5>Tara</h5>
+            <span id="name1" class="month-amount">&#36; 0.00</span> </div>
+        <div class="column"> <h5>Claire</h5>
+            <span id="name2" class="month-amount">&#36; 0.00</span> </div>
+            <div class="column"><h5>Kaitlyn</h5>
+            <span id="name3" class="month-amount">&#36; 0.00</span></div>
+        <div class="column"><h5>Lauren</h5>
+            <span id="name4" class="month-amount">&#36; 0.00</span></div>
+    </div>
     </div>
 
     <div class='history'>
     <h4 >History</h4>
-      <ul id="list" class="list">
-      </ul>
+      <table id="table">
+          <tr id="row1">
+              <td>Description</td>
+              <td>Amount</td>
+              <td>Date</td>
+              <td>Person</td>
+          </tr>
+      </table>
     </div>
     <script src="bills.js"></script>
-
-</section> <!-- page-->
 
 </body>
 </html>
