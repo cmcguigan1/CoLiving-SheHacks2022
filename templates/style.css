@@ -84,6 +84,10 @@ h4{
   padding-left: 10%;
 }
 
+.history td{
+  width:30%;
+}
+
 label{
   font-size: 20px;
 }
@@ -95,6 +99,8 @@ select{
 .expenseinput input{
   width: 10%;
   padding: 20px 20px;
-  margin: 8px 0;
+  margin: 8px 20px;
   box-sizing: border-box;
+
 }
+
