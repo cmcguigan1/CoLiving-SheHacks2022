@@ -5,13 +5,31 @@
         <link rel="stylesheet" href="style.css">
         
         <link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300&family=Quicksand&display=swap" rel="stylesheet">
-
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300&family=Quicksand&family=Work+Sans:wght@200&display=swap" rel="stylesheet">   
+<style>
+     header{
+            background: rgb(112,189,213);
+            padding: 30px 40px;
+            color: white;
+            text-align:center;
+            }
+            body{
+                font-size: 20px;  
+                color: black;
+            }
+            h1 {
+                padding-bottom: 20px; 
+                background: rgb(112,189,213);
+                color: white;}
+            #myForm{
+                display: none;
+            }
+</style>
     </head>
 
 <body>
-<h1>Welcome to your personal co-living page!</h1>
+<h1>welcome to your personal co-living page!</h1>
 
     <div class="navbar">
         <a href="chores.html">Chores</a>
@@ -20,13 +38,42 @@
         <a href="groceryList.html">Groceries</a>
 
 </div>
-<p style= "color:darkslategrey"><br/>
-    In your co-living page, you can accomplish all your day-to-day tasks.
+<center><p style= "color:cadetblue; "><br/><br/>
+   In your co-living page, you can accomplish all your day-to-day tasks.
     <br/><br/>
-</p>
-<h2><center>Sign in below to begin</center></h2>
-<center><button style= "background-color:cadetblue; border-color:sienna; color:white">sign in</button></center>
+</p></center>
+<h2><center>sign in below to begin</center></h2>
+
+
+
+<div class="openBtn">
+  <center><button class="openButton" onclick="openForm()" style="background-color:rgb(124, 196, 196); border-color:dimgray; color:black; ">sign in</button></center>
+</div>
+
+<div class= "loginPopup" >
+    <form id="myForm" action= "/action_page.php" class="formContainer" method="post">
+        <p><b>sign in</b></p>
+        <label for="email"><b>email</b></label>
+        <input type="text" placeholder="enter email" name="email" required>
+
+        <label for="psw"><b>password</b></label>
+        <input type="password" placeholder="enter password" name="psw" required>
+
+        <button type="submit" class="btn">sign in</button>
+        <button type="button" class="btn cancel" onclick="closeForm()">close</button>
+    </form>
+
+</div>
+<script>function openForm() {
+    document.getElementById('myForm').style.display = 'block';
+  }
+  
+  function closeForm() {
+    document.getElementById('myForm').style.display = 'none';
+  }
+
+</script>
 
 </body>
-</body>
+
 </html>
