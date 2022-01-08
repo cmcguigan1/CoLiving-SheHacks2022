@@ -24,6 +24,11 @@
                 color: white;}
             #myForm{
                 display: none;
+                border: 6px solid rgb(231, 159, 146);
+                border-radius: 12px;
+                background-color: rgb(231, 159, 146);
+                margin-right: 20px;
+                margin-left: 20px;
             }
 </style>
     </head>
@@ -39,7 +44,7 @@
 
 </div>
 <center><p style= "color:cadetblue; "><br/><br/>
-   In your co-living page, you can accomplish all your day-to-day tasks.
+   in your co-living page, you can accomplish all your day-to-day tasks.
     <br/><br/>
 </p></center>
 <h2><center>sign in below to begin</center></h2>
@@ -47,7 +52,7 @@
 
 
 <div class="openBtn">
-  <center><button class="openButton" onclick="openForm()" style="background-color:rgb(124, 196, 196); border-color:dimgray; color:black; ">sign in</button></center>
+  <center><button class="openButton" onclick="openForm(); hideButton(this)" style="background-color:rgb(124, 196, 196); border-color:dimgray; color:black; ">sign in</button></center>
 </div>
 
 <div class= "loginPopup" >
@@ -71,6 +76,9 @@
   function closeForm() {
     document.getElementById('myForm').style.display = 'none';
   }
+function hideButton(x){
+    x.style.display='none';
+}
 
 </script>
 
