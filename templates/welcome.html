@@ -50,7 +50,7 @@
 
 </div>
 <center><p style= "color:cadetblue; "><br/><br/>
-   in your co-living page, you can accomplish all your day-to-day tasks.
+   on your co-living page, you can accomplish all your day-to-day tasks.
     <br/><br/>
 </p></center>
 <h2 id= 'signInMessage'><center>sign in below to begin</center></h2>
@@ -63,19 +63,19 @@
 
 <div class= "loginPopup" >
     <iframe name="hiddenFrame" class="hide" style="width: 0; height:0;padding:0; background-color:white;"></iframe>
-    
+   
     <form id="myForm" action= "receiver.pl" target="hiddenFrame" class="formContainer" method="post">
         <p><b>sign in</b></p>
         <label for="username"><b>username</b></label>
-        <input id="usr" type="text" placeholder="enter username" name="username" required="required"/>
+        <input type="text" placeholder="enter username" name="username" aria-required="true">
 
         <label for="psw"><b>password</b></label>
-        <input id="pass" type="password" placeholder="enter password" name="psw" required="required"/>
+        <input type="password" placeholder="enter password" name="psw" aria-required="true">
 
-        <button id= 'btnSubmit'  type="submit" class="btn"  onclick= "closeForm(); openGreeting(); closeSignIn()">submit</button>
+        <button type="submit" class="btn"  onclick= "closeForm(); openGreeting(); closeSignIn()">submit</button>
         <button type="button" class="btn cancel"  onclick="closeForm(); showButton()">close</button>
     </form>
-    <form id="greeting" method="post" style="color:cadetblue; font-size: 60px;"><b><center>hello
+    <form id="greeting" method="post" style="color:rgb(124, 196, 196); font-size: 60px;"><b><center>hello!
     </center></b>
     </form>
 
@@ -99,7 +99,6 @@ function openGreeting(){
 function closeSignIn(){
     document.getElementById('signInMessage').style.display= 'none';
 }
-
 
 
 
