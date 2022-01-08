@@ -68,15 +68,15 @@
         <p><b>sign in</b></p>
        
     <label for="username"><b>username</b></label>    
-    <input id='usr' type="text" placeholder="enter username" name="username" required>
+    <input id='usr' type="text" placeholder="enter username" name="username" required/>
     
 
     <label for="psw"><b>password</b></label>    
-    <input id='pass' type="password" placeholder="enter password" name="psw" required>
+    <input id='pass' type="password" placeholder="enter password" name="psw" required/>
      
 
         <button type="submit" class="btn"  onclick= "closeFormCondition(); openGreeting(); closeSignIn()">submit</button>
-        <button type="button" class="btn cancel"  onclick="closeForm(); showButton()">close</button>
+        <button type="button" class="btn cancel" onclick="closeForm(); showButton()">close</button>
     </form>
     <form id="greeting" method="post" style="color:rgb(124, 196, 196); font-size: 60px;"><b><center>hello!
     </center></b>
@@ -91,7 +91,8 @@
     document.getElementById('myForm').style.display = 'none';
   }
   function closeFormCondition(){
-        document.getElementById('myForm').style.display = 'none';
+      if(document.getElementById('usr').value!=''&& document.getElementById('pass').value!=''){
+        document.getElementById('myForm').style.display = 'none';}
   }
 function hideButton(x){
     x.style.display='none';
@@ -100,10 +101,12 @@ function showButton(){
     document.getElementById('login').style.display='';
 }
 function openGreeting(){
-    document.getElementById('greeting').style.display='block';
+    if(document.getElementById('usr').value!=''&& document.getElementById('pass').value!=''){
+    document.getElementById('greeting').style.display='block';}
 }
 function closeSignIn(){
-    document.getElementById('signInMessage').style.display= 'none';
+    if(document.getElementById('usr').value!=''&& document.getElementById('pass').value!=''){
+    document.getElementById('signInMessage').style.display= 'none';}
 }
 
 
