@@ -109,4 +109,17 @@ function assign(){
 
 assign();
 
+//Rotate chores
+let rotateBtn = document.getElementById('rotate');
+rotateBtn.addEventListener("click", (event) => {rotateChores(event)});
+var counter = 0;
+function rotateChores(event){
+    counter++;
+    let assignmentlbls = document.querySelectorAll('#assignment-lbl');
+    let inputNames = document.querySelectorAll('.name')
+    for(let i=0;i<inputNames.length;i++,counter++){
+        assignmentlbls[i].innerText = inputNames[counter%assignmentlbls.length].innerText;
+    }
+}
+
 
