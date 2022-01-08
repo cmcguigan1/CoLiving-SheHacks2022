@@ -5,23 +5,53 @@
         <link rel="stylesheet" href="style.css">
         
         <link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300&family=Quicksand&display=swap" rel="stylesheet">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300&family=Quicksand&display=swap" rel="stylesheet">
 
+        <style>
+            h1 {
+                font-family: Georgia, serif; 
+            }
+            ul {
+                list-style-type: none;
+                font-size: 20px;
+            }
+            .choreList{
+                border: 1px solid black;
+                border-radius: 5px;
+                background-color: rgb(231, 159, 146);
+            }
+            li{
+                padding-bottom: 10px;
+            }
+            #firstChore{
+                padding-top: 10px;
+            }
+           
+        </style>
     </head>
 
 <body>
-  
-    <h1>Test</h1>
 
     <div class="navbar">
         <a href="chores.html">Chores</a>
         <a href="billsplit.html">Split Bills</a>
         <a href="welcome.html">Home</a>
         <a href="groceryList.html">Groceries</a>
-
-
     </div>
+
+    <h1>This Week's Chore Assignments!</h1>
+
+    <div class="choreList"> 
+        <ul class="list">
+            <li id="firstChore">Taking out Trash: </li>
+            <li id="secondChore">Dishes: </li>
+            <li id="thirdChore">Sweeping Floor: </li>
+        </ul>
+    </div> 
+
+
+
   <script src="chores.js"></script>
   
 </body>
