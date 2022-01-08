@@ -19,22 +19,6 @@
             font-size: 15px;
             font-family: Georgia, 'Times New Roman', Times, serif;
         }
-        .addBtn{
-            width: 25%;
-            padding: 10px;
-            margin-right: 0;
-            background:darkcyan;
-            color:black;
-            font-size: 14px;
-            cursor: pointer;
-            transition: 0.2s;
-            font-family: Georgia, 'Times New Roman', Times, serif;
-            font-weight: bold;
-        }
-        .addBtn :hover{
-            background-color: #bbb;
-            color: #FFF;
-        }
         ul li{
             cursor: pointer;
             position: relative;
@@ -108,7 +92,7 @@
     <header>
     <h1>Group List</h1>
     <input type="text" id="myInput" placeholder="Grocery needed"/>
-    <button id="adder">Add</button>
+    <button id="adder" onclick="addBtn()">Add</button>
     </header>
     <ul id= "myUL"></ul>
     <script src="groceryL.js"></script>
