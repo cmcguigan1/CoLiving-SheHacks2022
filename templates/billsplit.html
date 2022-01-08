@@ -40,7 +40,7 @@
             <div class="dropdown open">
                 <form>
                     <label> Who Paid?</label>  <br><br>
-                        <select>  
+                        <select id="dropdownlist">  
                         <option class="dropdown-item" value= "Roomate1"> Tara </option>  
                         <option class="dropdown-item" value= "Roomate2"> Claire </option>  
                         <option class="dropdown-item" value= "Roomate3"> Kaitlyn</option> 
@@ -57,8 +57,9 @@
         <input id="text" type="text" placeholder="Description">    
         <input id="number" type="number" placeholder="Value">
         <input id ="date" type="date" placeholder="Date">
-        <button class="btn">Add transaction</button>
+        <button class="btn" type ="button" onclick="getInputValue()"> Add transaction</button>
     </div>
+
     <div class='history'>
     <h4 >History</h4>
       <ul id="list" class="list">
@@ -66,6 +67,7 @@
     </div>
 
 </section> <!-- page-->
+<script src="bills.js"></script>
 
 </body>
 </html>
