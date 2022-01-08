@@ -24,6 +24,9 @@
                 padding-bottom: 20px; 
                 background: rgb(112,189,213);
                 color: white;}
+            #myForm{
+                display: none;
+            }
 </style>
     </head>
 
@@ -44,12 +47,13 @@
 <h2><center>sign in below to begin</center></h2>
 
 
+
 <div class="openBtn">
   <center><button class="openButton" onclick="openForm()" style="background-color:rgb(124, 196, 196); border-color:dimgray; color:black; font-family: Georgia, 'Times New Roman', Times, serif; transition:0.2s; padding: 15px 32 px;">sign in</button></center>
 </div>
-<div class="loginPopup">
-<div class= "formPopup" id="myForm">
-    <form action= "/action_page.php" class="formContainer">
+
+<div class= "loginPopup" >
+    <form id="myForm" action= "/action_page.php" class="formContainer" method="post">
         <p><b>sign in</b></p>
         <label for="email"><b>email</b></label>
         <input type="text" placeholder="enter email" name="email" required>
@@ -60,17 +64,18 @@
         <button type="submit" class="btn">sign in</button>
         <button type="button" class="btn cancel" onclick="closeForm()">close</button>
     </form>
-</div>
+
 </div>
 <script>function openForm() {
-    document.getElementById("myForm").style.display = "block";
+    document.getElementById('myForm').style.display = 'block';
   }
   
   function closeForm() {
-    document.getElementById("myForm").style.display = "none";
+    document.getElementById('myForm').style.display = 'none';
   }
 
 </script>
+
 </body>
 
 </html>
