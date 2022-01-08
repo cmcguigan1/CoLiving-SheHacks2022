@@ -16,17 +16,17 @@ function editCell(event){
     let inputBox= "";
     let removeBtn= "";
 
-    if(parent.className === 'choreLi'){
-        lbl = clickedBtn.nextElementSibling;
-        inputBox = lbl.nextElementSibling;
-        personlbl = inputBox.nextElementSibling;
-        removeBtn = personlbl.nextElementSibling;
+    if(parent.className === 'choreLi'){ 
+        removeBtn = clickedBtn.nextElementSibling;
+        personlbl = clickedBtn.previousElementSibling;
+        inputBox = personlbl.previousElementSibling;
+        lbl = inputBox.previousElementSibling;
     }
 
     else{
-        lbl = clickedBtn.nextElementSibling;
-        inputBox = lbl.nextElementSibling;
-        removeBtn = inputBox.nextElementSibling;
+        inputBox = clickedBtn.previousElementSibling;
+        removeBtn = clickedBtn.nextElementSibling;
+        lbl = inputBox.previousElementSibling;
     }
     
     if(clickedBtn.innerText === 'edit'){
@@ -57,23 +57,23 @@ function addNew(event){
     let li = document.createElement('li');
     if(addbtn.id === 'newChore'){
         li.className = 'choreLi';
-        li.innerHTML = `<button id='edit-btn'>edit</button>
-        <label id='edit-lbl'>New: </label>
+        li.innerHTML = `<label id='edit-lbl'>New: </label>
         <input id='edit-txt' type='text' hidden />
         <label id='assignment-lbl'>Person</label>
+        <button id='edit-btn'>edit</button>
         <button id='remove-btn' hidden>remove</button>`
-        li.firstElementChild.addEventListener("click", (event) => {editCell(event)});
+        li.lastElementChild.previousElementSibling.addEventListener("click", (event) => {editCell(event)});
         li.lastElementChild.addEventListener("click", (event) => {removeCell(event)});
         document.querySelector('.list').appendChild(li);
     }
     else{
         li.className = 'personLi';
         li.innerHTML = `<label id='fixed-lbl'>Person: </label>
-        <button id='edit-btn'>edit</button>
         <label id='edit-lbl' class='name'>New </label>
         <input id='edit-txt' type='text' hidden />
+        <button id='edit-btn'>edit</button>
         <button id='remove-btn' hidden>remove</button>`
-        li.firstElementChild.nextElementSibling.addEventListener("click", (event) => {editCell(event)});
+        li.lastElementChild.previousElementSibling.addEventListener("click", (event) => {editCell(event)});
         li.lastElementChild.addEventListener("click", (event) => {removeCell(event)});
         document.querySelector('.people').appendChild(li);
     }
@@ -94,6 +94,7 @@ function removeCell(event){
     else{
         document.querySelector('.people').removeChild(li);
     }
+    assign();
 }
 
 //Assigning people to chores
@@ -108,5 +109,24 @@ function assign(){
 }   
 
 assign();
+
+//Rotate chores
+let rotateBtn = document.getElementById('rotate');
+rotateBtn.addEventListener("click", (event) => {rotateChores(event)});
+var counter = 0;
+
+function rotateChores(event){
+    counter++;
+    let assignmentlbls = document.querySelectorAll('#assignment-lbl');
+    let inputNames = document.querySelectorAll('.name')
+    if(assignmentlbls.length != inputNames.length){
+        alert("Please ensure you have the same amount of people as chores!");
+    }
+    else{
+        for(let i=0;i<inputNames.length;i++,counter++){
+            assignmentlbls[i].innerText = inputNames[counter%assignmentlbls.length].innerText;
+        }
+    }
+}
 
 

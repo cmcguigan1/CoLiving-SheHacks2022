@@ -31,7 +31,8 @@
                 border: 1px solid rgb(231, 159, 146);
                 border-radius: 12px;
                 background-color: rgb(231, 159, 146);
-                width: 40%;
+                width: 45%;
+                padding-top: 10px;
             }
             .peopleList{
                 float: right;
@@ -43,11 +44,10 @@
             li{
                 padding-bottom: 20px;
             }
-            #firstChore, #firstPerson{
-                padding-top: 20px;
+            #firstChore, #Person1{
+                padding-top: 10px;
             }
             button{
-                margin-right: 0;
                 background:rgb(124, 196, 196);
                 color:black;
                 font-size: 12px;
@@ -58,12 +58,31 @@
                 float: left;
                 margin-left: 170px;
                 margin-top: 10px;
+                margin-bottom: 20px;
             }
             #newPerson{
                 float: left;
                 margin-left: 500px;
                 margin-top: 10px;
+                margin-bottom: 20px;
             }
+            #rotate {
+                margin-left: 45%;
+                margin-bottom: 20px;
+            }
+            li.personLi > #edit-btn {
+                float: right;
+                margin-right: 30px;
+            }
+            li.choreLi > #edit-btn {
+                float: right;
+                margin-right: 30px;
+            }
+            h2 {
+                text-align: center;
+                font-size: 25px;
+            }
+
 
         </style>
     </head>
@@ -77,76 +96,80 @@
         <a href="groceryList.html">Groceries</a>
     </div>
 
-    <h1>This Week's Chore Assignments!</h1>
+    <div class='title'>
+        <h1>This Week's Chore Assignments!</h1>
+        <button id='rotate'>Rotate Chores</button>
+    </div>    
 
     <div class="choreList"> 
+        <h2>Chores</h2>
         <ul class="list">
-
             <li id="firstChore" class='choreLi'>
-                <button id='edit-btn'>edit</button>
                 <label id='edit-lbl'>Dishes: </label>
                 <input id='edit-txt' type='text' hidden />
                 <label id='assignment-lbl'>Claire</label>
+                <button id='edit-btn'>edit</button>
                 <button id='remove-btn' hidden>remove</button>
             </li>
 
             <li id="secondChore" class='choreLi'> 
-                <button id='edit-btn'>edit</button>
                 <label id='edit-lbl'>Take out Trash: </label>
                 <input id='edit-txt' type='text' hidden />
                 <label id='assignment-lbl'>Tara</label>
+                <button id='edit-btn'>edit</button>
                 <button id='remove-btn' hidden>remove</button>
             </li>
 
             <li id="thirdChore" class='choreLi'>
-                <button id='edit-btn'>edit</button>
                 <label id='edit-lbl'>Sweeping: </label>
                 <input id='edit-txt' type='text' hidden />
                 <label id='assignment-lbl'>Lauren</label>
+                <button id='edit-btn'>edit</button>
                 <button id='remove-btn' hidden>remove</button>
             </li>
 
             <li id="fourthChore" class='choreLi'>
-                <button id='edit-btn'>edit</button>
                 <label id='edit-lbl'>Laundry: </label>
                 <input id='edit-txt' type='text' hidden />
                 <label id='assignment-lbl'>Kaitlyn</label>
+                <button id='edit-btn'>edit</button>
                 <button id='remove-btn' hidden>remove</button>
             </li>
         </ul>
     </div> 
         
     <div class="peopleList">
+        <h2>Roomates</h2>
         <ul class='people'>
             <li id='person1' class='personLi'>
                 <label id='fixed-lbl'>Person: </label>
-                <button id='edit-btn'>edit</button>
                 <label id='edit-lbl' class='name'>Claire </label>
                 <input id='edit-txt' type='text' hidden />
+                <button id='edit-btn'>edit</button>
                 <button id='remove-btn' hidden>remove</button>
             </li>
 
             <li id='person2' class='personLi'>
                 <label id='fixed-lbl'>Person: </label>
-                <button id='edit-btn'>edit</button>
                 <label id='edit-lbl' class='name'>Kaitlyn </label>
                 <input id='edit-txt' type='text' hidden />
+                <button id='edit-btn'>edit</button>
                 <button id='remove-btn' hidden>remove</button>
             </li>
 
             <li id='person3' class='personLi'>
                 <label id='fixed-lbl'>Person: </label>
-                <button id='edit-btn'>edit</button>
                 <label id='edit-lbl' class='name'>Lauren </label>
                 <input id='edit-txt' type='text' hidden />
+                <button id='edit-btn'>edit</button>
                 <button id='remove-btn' hidden>remove</button>
             </li>
 
             <li id='person4' class='personLi'>
                 <label id='fixed-lbl'>Person: </label>
-                <button id='edit-btn'>edit</button>
                 <label id='edit-lbl' class='name'>Tara </label>
                 <input id='edit-txt' type='text' hidden />
+                <button id='edit-btn'>edit</button>
                 <button id='remove-btn' hidden>remove</button>
             </li>
         </ul>
