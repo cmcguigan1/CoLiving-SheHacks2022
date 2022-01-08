@@ -45,8 +45,12 @@ h4{
 
 .budget-container{
   padding-top: 15%;
-  padding-bottom: 10%;
+  padding-bottom: 6%;
   text-align:center;
+}
+
+.budget-container h5{
+  font-size: 20px;
 }
 
 .budget-container .column{
@@ -67,7 +71,6 @@ h4{
 }
 
 .expenseinput{
-  padding-top: 3%;
   align-items: center;
   text-align: center;
 }
@@ -79,4 +82,19 @@ h4{
 
 .history{
   padding-left: 10%;
+}
+
+label{
+  font-size: 20px;
+}
+
+select{
+  font-size: 15px;
+}
+
+.expenseinput input{
+  width: 10%;
+  padding: 20px 20px;
+  margin: 8px 0;
+  box-sizing: border-box;
 }
