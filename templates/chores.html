@@ -5,22 +5,95 @@
         <link rel="stylesheet" href="style.css">
         
         <link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300&family=Quicksand&display=swap" rel="stylesheet">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300&family=Quicksand&display=swap" rel="stylesheet">
 
+        <style>
+            header{
+            background: rgb(112,189,213);
+            padding: 30px 40px;
+            color: white;
+            text-align:center;
+            }
+            body{
+                font-family: 'Fauna One', serif;
+                font-size: 20px;  
+                color: white;
+            }
+            h1 {
+                font-family: Georgia, serif;
+                padding-bottom: 20px; 
+                background: rgb(112,189,213);
+                color: white;
+            }
+            ul {
+                list-style-type: none;
+            }
+            .choreList{
+                border: 1px solid rgb(231, 159, 146);
+                border-radius: 12px;
+                background-color: rgb(231, 159, 146);
+                margin-right: 20px;
+                margin-left: 20px;
+            }
+            li{
+                padding-bottom: 20px;
+            }
+            #firstChore{
+                padding-top: 20px;
+            }
+            button{
+                margin-right: 0;
+                background:rgb(124, 196, 196);
+                color:black;
+                font-size: 12px;
+                cursor: pointer;
+                transition: 0.2s;
+                font-family: Georgia, 'Times New Roman', Times, serif;
+            }
+
+        </style>
     </head>
 
 <body>
-  
-    <h1>Test</h1>
 
     <div class="navbar">
         <a href="chores.html">Chores</a>
         <a href="billsplit.html">Split Bills</a>
         <a href="welcome.html">Home</a>
         <a href="groceryList.html">Groceries</a>
-
     </div>
+
+    <h1>This Week's Chore Assignments!</h1>
+
+    <div class="choreList"> 
+        <ul class="list">
+
+            <li id="firstChore">
+                <button id='edit-btn'>edit</button>
+                <label id='edit-lbl'>Dishes: </label>
+                <input id='edit-txt' type='text' hidden />
+                <button id='remove-btn' hidden>remove</button>
+            </li>
+            <li id="secondChore"> 
+                <button id='edit-btn'>edit</button>
+                <label id='edit-lbl'>Take out Trash: </label>
+                <input id='edit-txt' type='text' hidden />
+                <button id='remove-btn' hidden>remove</button>
+            </li>
+            <li id="thirdChore">
+                <button id='edit-btn'>edit</button>
+                <label id='edit-lbl'>Sweeping: </label>
+                <input id='edit-txt' type='text' hidden />
+                <button id='remove-btn' hidden>remove</button>
+            </li>
+        </ul>
+    </div> 
+
+    <div>
+        <button id='newChore'>Add Chore</button>
+    </div>
+  
   <script src="chores.js"></script>
   
 </body>

@@ -11,7 +11,7 @@
     </head>
 
 <body>
-<h1>Welcome to your personal co-living page!</h1>
+<h1>welcome to your personal co-living page!</h1>
 
     <div class="navbar">
         <a href="chores.html">Chores</a>
@@ -20,5 +20,40 @@
         <a href="groceryList.html">Groceries</a>
 
 </div>
+<center><p style= "color:cadetblue"><br/><br/>
+   In your co-living page, you can accomplish all your day-to-day tasks.
+    <br/><br/>
+</p></center>
+<h2><center>sign in below to begin</center></h2>
+
+
+<div class="openBtn">
+  <center><button class="openButton" onclick="openForm()" style="background-color:cadetblue; border-color:black; color:white">sign in</button></center>
+</div>
+<div class="loginPopup">
+<div class= "formPopup" id="myForm">
+    <form action= "/action_page.php" class="formContainer">
+        <p><b>sign in</b></p>
+        <label for="email"><b>email</b></label>
+        <input type="text" placeholder="enter email" name="email" required>
+
+        <label for="psw"><b>password</b></label>
+        <input type="password" placeholder="enter password" name="psw" required>
+
+        <button type="submit" class="btn">sign in</button>
+        <button type="button" class="btn cancel" onclick="closeForm()">close</button>
+    </form>
+</div>
+</div>
+<script>function openForm() {
+    document.getElementById("myForm").style.display = "block";
+  }
+  
+  function closeForm() {
+    document.getElementById("myForm").style.display = "none";
+  }
+
+</script>
 </body>
+
 </html>
