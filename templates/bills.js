@@ -1,6 +1,4 @@
-
-function divide(){
-  num1 = document.getElementById('people').value;
-  num2 = document.getElementById('price').value;
-  document.getElementById('result').innerHTML = num2/num1;
-}
+const list = document.getElementById('list');
+const number = document.getElementById('number');
+const date = document.getElementById('date');
+const text = document.getElementById('text');
