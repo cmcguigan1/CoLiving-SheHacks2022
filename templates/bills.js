@@ -26,6 +26,9 @@ document.getElementById("button").onclick = function(){
       document.getElementById("name4").innerText = "$" + amount;
       }
       publishhistory();
+
+      let inputs = document.querySelectorAll("input");
+      inputs.forEach((input) => (input.value = ""));
 };
 
 function publishhistory(){
