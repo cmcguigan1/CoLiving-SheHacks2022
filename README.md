@@ -25,7 +25,7 @@ Add in your roommates and let CoLiving randomly assign individuals to chores and
 
 Add in house hold groceries or even your own to prepare for the next grocery store trip!
 
-![image](https://user-images.githubusercontent.com/96666915/148665054-0d928fe1-3c78-4904-9a69-56a4f7ef712f.png)
+![image]<img width="1432" alt="Screen Shot 2022-01-08 at 5 49 53 PM" src="https://user-images.githubusercontent.com/90729743/148665311-9329f98e-5a49-4f45-9017-a295e66548cf.png">
 
 ### Budget Tracker
 
