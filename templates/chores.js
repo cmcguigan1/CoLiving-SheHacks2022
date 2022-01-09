@@ -103,9 +103,6 @@ function assign(){
     let chores = document.querySelectorAll('.choreLi')
     let assignmentlbls = document.querySelectorAll('#assignment-lbl');
     let inputNames = document.querySelectorAll('.name')
-    /*for(let i=0;i<names.length;i++){
-        assignmentlbls[i].innerText = inputNames[i].innerText;
-    }*/
     if(assignmentlbls.length > inputNames.length){
         for(let i=0;i<assignmentlbls.length;i++){
             assignmentlbls[i].innerText = inputNames[i%inputNames.length].innerText;
@@ -122,10 +119,10 @@ function assign(){
         }
     }
 }   
-
 //assign();
 
-//Randomly assign chores
+
+//Randomly assign chores to roommates
 let rotateBtn = document.getElementById('rotate');
 rotateBtn.addEventListener("click", (event) => {rotateChores(event)});
 //var counter=0;
@@ -143,6 +140,9 @@ function rotateChores(event){
         assignmentlbls[j].innerText = inputNames[randomNums[j]].innerText;
     }
 }
+
+//below are other, not funcitonal attepts at the rotate function 
+
 /*function rotateChores(event){
     //counter++;
     let assignmentlbls = document.querySelectorAll('#assignment-lbl');
