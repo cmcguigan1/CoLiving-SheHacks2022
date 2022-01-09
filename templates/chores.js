@@ -1,5 +1,5 @@
 
-//Edit type of chores
+//Edit type of chores or participants
 let cells = document.getElementsByTagName('li');
 
 let btns = document.querySelectorAll('#edit-btn');
@@ -103,19 +103,68 @@ function assign(){
     let chores = document.querySelectorAll('.choreLi')
     let assignmentlbls = document.querySelectorAll('#assignment-lbl');
     let inputNames = document.querySelectorAll('.name')
-    for(let i=0;i<names.length;i++){
+    /*for(let i=0;i<names.length;i++){
         assignmentlbls[i].innerText = inputNames[i].innerText;
+    }*/
+    if(assignmentlbls.length > inputNames.length){
+        for(let i=0;i<assignmentlbls.length;i++){
+            assignmentlbls[i].innerText = inputNames[i%inputNames.length].innerText;
+        }
+    }
+    else if(assignmentlbls.length < inputNames.length){
+        for(let i=0;i<assignmentlbls.length;i++){
+            assignmentlbls[i].innerText = inputNames[i%inputNames.length].innerText;
+        }
+    }
+    else{
+        for(let i=0;i<inputNames.length;i++){
+            assignmentlbls[i].innerText = inputNames[i%assignmentlbls.length].innerText;
+        }
     }
 }   
 
-assign();
+//assign();
 
-//Rotate chores
+//Randomly assign chores
 let rotateBtn = document.getElementById('rotate');
 rotateBtn.addEventListener("click", (event) => {rotateChores(event)});
-var counter = 0;
+//var counter=0;
 
 function rotateChores(event){
+    
+    let assignmentlbls = document.querySelectorAll('#assignment-lbl');
+    let inputNames = document.querySelectorAll('.name');
+    let randomNums = [];
+    for(let i=0; i<assignmentlbls.length ; i++){
+        let rand = Math.floor(Math.random() * (inputNames.length))
+        randomNums.push(rand);
+    }
+    for(let j=0; j<assignmentlbls.length ; j++){
+        assignmentlbls[j].innerText = inputNames[randomNums[j]].innerText;
+    }
+}
+/*function rotateChores(event){
+    //counter++;
+    let assignmentlbls = document.querySelectorAll('#assignment-lbl');
+    let inputNames = document.querySelectorAll('.name');
+    if(assignmentlbls.length > inputNames.length){
+        for(let i=0;i<assignmentlbls.length;i++){
+            assignmentlbls[i].innerText = inputNames[(i+1)%inputNames.length].innerText;
+        }
+    }
+    else if(assignmentlbls.length < inputNames.length){
+        for(let i=0;i<assignmentlbls.length;i++){
+            assignmentlbls[i].innerText = inputNames[(i+1)%inputNames.length].innerText;
+        }
+    }
+    else{
+        for(let i=0;i<inputNames.length;i++){
+            assignmentlbls[i].innerText = inputNames[(i+1)%inputNames.length].innerText;
+        }
+    }
+}*/
+
+/*function rotateChores(event){
     counter++;
     let assignmentlbls = document.querySelectorAll('#assignment-lbl');
     let inputNames = document.querySelectorAll('.name')
@@ -127,6 +176,5 @@ function rotateChores(event){
             assignmentlbls[i].innerText = inputNames[counter%assignmentlbls.length].innerText;
         }
     }
-}
-
+}*/
 
